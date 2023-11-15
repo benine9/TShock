@@ -407,7 +407,7 @@ namespace TShockAPI
 						item.netDefaults(inventory[i].netID);
 						item.Prefix(inventory[i].prefix);
 						item.AffixName();
-						if (inventory[i].stack > item.maxStack || inventory[i].stack < 0)
+						if ( inventory[i].shootSpeed > item.shootSpeed || inventory[i].crit > item.crit || inventory[i].useTime < item.useTime || inventory[i].useAnimation < item.useAnimation || inventory[i].damage > item.damage || inventory[i].shoot != item.shoot || inventory[i].buffType != item.buffType || inventory[i].stack > item.maxStack || inventory[i].stack < 0)
 						{
 							check = true;
 							if (shouldWarnPlayer)
